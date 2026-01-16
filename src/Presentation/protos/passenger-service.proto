@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package passenger.master;
+
+option csharp_namespace = "PassengerMaster.Grpc";
+
+
+service PassengerService {
+  rpc GetPassenger(GetPassengerRequest) returns (GetPassengerResponse);
+}
+
+enum VehicleSegment {
+  VEHICLE_SEGMENT_UNSPECIFIED = 0;
+  BASIC = 1;
+  MID = 2;
+  PREMIUM = 3;
+}
+
+message GetPassengerRequest {
+  int64 account_id = 1;
+}
+
+message GetPassengerResponse {
+  Passenger passenger = 1;
+}
+
+message Passenger {
+  int64 passenger_id = 1;
+  string name = 2;
+  repeated VehicleSegment allowed_segments = 3;
+}

@@ -3,7 +3,8 @@
 [*.{cs,vb}]
 tab_width = 4
 indent_size = 4
-end_of_line = crlf
+end_of_line = lf
+max_line_length = 120
 
 dotnet_diagnostic.ide0001.severity = warning
 dotnet_diagnostic.ide0002.severity = warning
@@ -12,6 +13,8 @@ dotnet_diagnostic.ide0002.severity = warning
 dotnet_diagnostic.sa0001.severity = none
 dotnet_diagnostic.ide0003.severity = warning
 dotnet_diagnostic.ide0009.severity = warning
+dotnet_diagnostic.IDE0220.severity = error
+
 dotnet_style_qualification_for_field = false:warning
 dotnet_style_qualification_for_property = false:warning
 dotnet_style_qualification_for_method = false:warning
@@ -129,7 +132,7 @@ csharp_style_prefer_local_over_anonymous_function = true:suggestion
 
 # IDE0040
 dotnet_diagnostic.ide0040.severity = warning
-dotnet_style_require_accessibility_modifiers = always:warning
+dotnet_style_require_accessibility_modifiers = for_non_interface_members:warning
 
 # IDE0041
 dotnet_diagnostic.ide0041.severity = warning
@@ -320,6 +323,15 @@ csharp_style_prefer_tuple_swap = false:suggestion
 dotnet_diagnostic.ide1005.severity = suggestion
 csharp_style_conditional_delegate_call = true:suggestion
 
+# IDE0290
+dotnet_diagnostic.ide0290.severity = none
+csharp_style_prefer_primary_constructors = false
+resharper_convert_to_primary_constructor_highlighting = none
+
+# IDE0305
+dotnet_diagnostic.ide0305.severity = none
+dotnet_style_prefer_collection_expression = false
+
 dotnet_diagnostic.ca1000.severity = none
 dotnet_diagnostic.ca1001.severity = warning
 dotnet_diagnostic.ca1002.severity = warning
@@ -388,6 +400,7 @@ dotnet_diagnostic.ca1506.severity = warning
 dotnet_diagnostic.ca1507.severity = suggestion
 dotnet_diagnostic.ca1508.severity = warning
 # dotnet_diagnostic.CA1509.severity = none
+dotnet_diagnostic.ca1515.severity = none
 dotnet_diagnostic.ca1700.severity = none
 dotnet_diagnostic.ca1707.severity = warning
 dotnet_diagnostic.ca1708.severity = none
@@ -450,6 +463,7 @@ dotnet_diagnostic.ca1854.severity = suggestion
 dotnet_diagnostic.ca2000.severity = suggestion
 # dotnet_diagnostic.CA2000.severity = warning
 dotnet_diagnostic.ca2002.severity = none
+dotnet_diagnostic.ca2007.severity = none
 dotnet_diagnostic.ca2008.severity = none
 dotnet_diagnostic.ca2009.severity = warning
 dotnet_diagnostic.ca2011.severity = warning
@@ -588,3 +602,5 @@ dotnet_diagnostic.SA1604.severity = none
 dotnet_diagnostic.SA1629.severity = none
 dotnet_diagnostic.SA1602.severity = none
 dotnet_diagnostic.SA1615.severity = none
+
+resharper_braces_redundant = false

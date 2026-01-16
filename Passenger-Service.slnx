@@ -1,0 +1,13 @@
+﻿<Solution>
+  <Folder Name="/common/">
+    <File Path=".editorconfig" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src\Application\Application.csproj" Type="Classic C#" />
+    <Project Path="src\Infrastructure\Infrastructure.csproj" Type="Classic C#" />
+    <Project Path="src\Presentation\Presentation.csproj" Type="Classic C#" />
+  </Folder>
+  <Folder Name="/tests/" />
+</Solution>
