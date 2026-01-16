@@ -2,6 +2,7 @@
 using FluentMigrator.Runner;
 using Infrastructure.Db.Options;
 using Infrastructure.Db.Repositories;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Npgsql;
 
@@ -9,14 +10,15 @@ namespace Infrastructure.Extensions;
 
 public static class ServiceCollectionExtensions
 {
-    public static IServiceCollection AddPersistence(this IServiceCollection services, DatabaseConfigOptions options)
+    public static IServiceCollection AddPersistence(this IServiceCollection services, IConfiguration configuration)
     {
+        DatabaseConfigOptions? options = configuration.GetSection("Postgres").Get<DatabaseConfigOptions>();
         var builder = new NpgsqlConnectionStringBuilder
         {
-            Host = options.Host,
-            Port = Convert.ToInt32(options.Port),
-            Username = options.Username,
-            Password = options.Password,
+            Host = options?.Host,
+            Port = Convert.ToInt32(options?.Port),
+            Username = options?.Username,
+            Password = options?.Password,
         };
         string connectionString = builder.ToString();
 

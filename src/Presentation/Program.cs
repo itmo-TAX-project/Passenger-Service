@@ -7,23 +7,17 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Presentation.Extensions;
 
-internal class Program
-{
-    public static void Main(string[] args)
-    {
-        WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
-        builder.Configuration.AddJsonFile("appsettings.json");
-        builder.Services.Configure<DatabaseConfigOptions>(builder.Configuration.GetSection("Postgres"));
+builder.Configuration.AddJsonFile("appsettings.json");
+builder.Services.Configure<DatabaseConfigOptions>(builder.Configuration.GetSection("Postgres"));
 
-        builder.Services.AddPlatform();
+builder.Services.AddPlatform();
 
-        builder.Services.AddPersistence();
-        builder.Services.AddKafkaApplication(builder.Configuration);
-        builder.Services.AddPresentation();
+builder.Services.AddPersistence(builder.Configuration);
+builder.Services.AddKafkaApplication(builder.Configuration);
+builder.Services.AddPresentation();
 
-        WebApplication app = builder.Build();
+WebApplication app = builder.Build();
 
-        app.Run();
-    }
-}
+app.Run();
