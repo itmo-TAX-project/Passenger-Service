@@ -9,6 +9,7 @@
     <ItemGroup>
       <PackageReference Include="FluentMigrator" />
       <PackageReference Include="FluentMigrator.Runner" />
+      <PackageReference Include="Itmo.Dev.Platform.MessagePersistence.Postgres" />
       <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
       <PackageReference Include="Npgsql" />
     </ItemGroup>

@@ -14,16 +14,17 @@
     <PackageVersion Include="Grpc.Core" Version="2.46.6" />
     <PackageVersion Include="Grpc.Tools" Version="2.76.0" />
     <PackageVersion Include="Itmo.Dev.Platform.Kafka" Version="2.3.326" />
+    <PackageVersion Include="Itmo.Dev.Platform.MessagePersistence.Postgres" Version="2.2.326" />
     <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="10.0.2" />
     <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.2" />
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.11.0" />
     <PackageVersion Include="Npgsql" Version="10.0.1" />
-    <PackageVersion Include="SourceKit.Analyzers.Collections" Version="1.0.34" />
-    <PackageVersion Include="SourceKit.Analyzers.Enumerable" Version="1.0.34" />
-    <PackageVersion Include="SourceKit.Analyzers.MemberAccessibility" Version="1.0.31" />
-    <PackageVersion Include="SourceKit.Analyzers.Nullable" Version="1.0.34" />
-    <PackageVersion Include="SourceKit.Analyzers.Properties" Version="1.0.34" />
-    <PackageVersion Include="Itmo.Dev.Editorconfig" Version="1.0.5" />
+    <PackageVersion Include="SourceKit.Analyzers.Collections" Version="1.0.52" />
+    <PackageVersion Include="SourceKit.Analyzers.Enumerable" Version="1.0.52" />
+    <PackageVersion Include="SourceKit.Analyzers.MemberAccessibility" Version="1.0.52" />
+    <PackageVersion Include="SourceKit.Analyzers.Nullable" Version="1.0.52" />
+    <PackageVersion Include="SourceKit.Analyzers.Properties" Version="1.0.52" />
+    <PackageVersion Include="Itmo.Dev.Editorconfig" Version="1.0.13" />
     <PackageVersion Include="StyleCop.Analyzers" Version="1.2.0-beta.507" />
     <PackageVersion Include="xunit" Version="2.9.0" />
     <PackageVersion Include="xunit.runner.visualstudio" Version="2.8.2">

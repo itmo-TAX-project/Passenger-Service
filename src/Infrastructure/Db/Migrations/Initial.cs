@@ -30,7 +30,6 @@ public class Initial : Migration
             .WithColumn("mid_allowed")
             .AsBoolean()
             .NotNullable()
-            .Identity()
             .WithColumn("premium_allowed")
             .AsBoolean()
             .NotNullable();
