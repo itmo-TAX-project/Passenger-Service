@@ -7,6 +7,7 @@ option csharp_namespace = "PassengerMaster.Grpc";
 
 service PassengerService {
   rpc GetPassenger(GetPassengerRequest) returns (GetPassengerResponse);
+  rpc GetAccountId(GetAccountIdRequest) returns (GetAccountIdResponse);
 }
 
 enum VehicleSegment {
@@ -14,6 +15,14 @@ enum VehicleSegment {
   BASIC = 1;
   MID = 2;
   PREMIUM = 3;
+}
+
+message GetAccountIdRequest {
+  int64 passenger_id = 1;
+}
+
+message GetAccountIdResponse {
+  int64 account_id = 1;
 }
 
 message GetPassengerRequest {

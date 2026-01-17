@@ -16,7 +16,7 @@ builder.Services.AddPlatform();
 
 builder.Services.AddPersistence(builder.Configuration);
 builder.Services.AddKafkaApplication(builder.Configuration);
-builder.Services.AddPresentation();
+builder.Services.AddPresentation(builder.Configuration);
 
 WebApplication app = builder.Build();
 

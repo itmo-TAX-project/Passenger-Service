@@ -1,0 +1,50 @@
+﻿syntax = "proto3";
+
+package account.master;
+
+option csharp_namespace = "AccountMaster.Grpc";
+
+
+service AccountService {
+  rpc GetAccount(GetAccountRequest) returns (GetAccountResponse);
+  rpc CheckBanStatus(CheckBanStatusRequest) returns (CheckBanStatusResponse);
+  rpc GetAccountIdByName(GetAccountIdByNameRequest) returns (GetAccountIdByNameResponse);
+}
+
+message GetAccountIdByNameRequest {
+  string name = 1;
+}
+
+message GetAccountIdByNameResponse {
+  int64 account_id = 1;
+}
+
+message CheckBanStatusRequest {
+  int64 account_id = 1;
+}
+
+message CheckBanStatusResponse {
+  bool is_banned = 1;
+}
+
+message GetAccountRequest {
+  int64 account_id = 1;
+}
+
+message GetAccountResponse {
+  Account account = 1;
+}
+
+message Account {
+  int64 account_id = 1;
+  string name = 2;
+  string phone = 3;
+  Role role = 4;
+}
+
+enum Role {
+  ROLE_UNSPECIFIED = 0;
+  ADMIN = 1;
+  DRIVER = 2;
+  PASSENGER = 3;
+}
